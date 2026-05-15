@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no,
+viewport-fit=cover">
+
+<title>AT LIVE ULTRA PREMIUM</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+width:100%;
+min-height:100%;
+overflow-x:hidden;
+scroll-behavior:smooth;
+background:#050816;
+}
+
+/* 🌌 DARK PK BACKGROUND */
+body{
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+background:
+linear-gradient(
+180deg,
+#050816 0%,
+#091427 30%,
+#14071f 65%,
+#1a0626 100%
+);
+
+position:relative;
+
+}
+
+/* 🔥 DARK AURORA */
+body::before{
+
+content:'';
+
+position:fixed;
+inset:-50%;
+
+background:
+radial-gradient(circle at 20% 20%, rgba(0,150,255,.20), transparent 25%),
+radial-gradient(circle at 80% 10%, rgba(255,0,140,.20), transparent 30%),
+radial-gradient(circle at 50% 90%, rgba(0,110,255,.12), transparent 35%),
+radial-gradient(circle at 70% 60%, rgba(255,0,110,.14), transparent 30%);
+
+animation:auroraMove 18s linear infinite;
+
+pointer-events:none;
+
+z-index:1;
+
+filter:blur(30px);
+
+}
+
+@keyframes auroraMove{
+
+0%{
+transform:rotate(0deg) scale(1);
+}
+
+50%{
+transform:rotate(180deg) scale(1.15);
+}
+
+100%{
+transform:rotate(360deg) scale(1);
+}
+
+}
+
+/* ✨ FLOATING STARS */
+.stars-container{
+
+position:fixed;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:2;
+
+}
+
+.star{
+
+position:absolute;
+bottom:-20px;
+
+border-radius:50%;
+
+background:#fff;
+
+box-shadow:
+0 0 10px rgba(255,255,255,.9),
+0 0 18px rgba(0,170,255,.7),
+0 0 28px rgba(255,0,128,.6);
+
+animation:floatUp linear infinite;
+
+}
+
+.star.small{
+width:2px;
+height:2px;
+}
+
+.star.medium{
+width:4px;
+height:4px;
+}
+
+.star.big{
+width:7px;
+height:7px;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-130vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* MAIN */
+.phone-container{
+
+width:100%;
+max-width:700px;
+min-height:100vh;
+
+padding:12px;
+
+position:relative;
+z-index:10;
+
+display:flex;
+flex-direction:column;
+
+}
+
+/* HEADER */
+.app-header{
+
+width:100%;
+
+padding:2px;
+
+border-radius:30px;
+
+position:relative;
+overflow:hidden;
+
+margin-bottom:12px;
+
+background:
+linear-gradient(
+135deg,
+rgba(0,170,255,.15),
+rgba(255,0,128,.15)
+);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.5);
+
+}
+
+.app-header::before{
+
+content:'';
+
+position:absolute;
+
+width:220%;
+height:220%;
+
+top:-60%;
+left:-60%;
+
+background:
+conic-gradient(
+#009dff,
+#ff0077,
+#3a8dff,
+#ff4dc4,
+#009dff
+);
+
+animation:rotateBorder 6s linear infinite;
+
+}
+
+@keyframes rotateBorder{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.header-content{
+
+position:relative;
+z-index:2;
+
+padding:18px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(5,10,25,.92),
+rgba(20,8,35,.90)
+);
+
+}
+
+/* TITLE */
+.app-title{
+
+text-align:center;
+
+font-size:28px;
+
+font-weight:900;
+
+letter-spacing:1px;
+
+background:
+linear-gradient(
+45deg,
+#00bfff,
+#ff0080,
+#00bfff
+);
+
+background-size:300% 300%;
+
+animation:titleGlow 6s ease infinite;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 15px rgba(255,0,128,.5);
+
+}
+
+@keyframes titleGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.live-clock-wrapper{
+
+margin-top:6px;
+
+text-align:center;
+
+font-size:13px;
+font-weight:700;
+
+color:#ffffff;
+
+}
+
+/* TICKER */
+.ticker-container{
+
+width:100%;
+
+overflow:hidden;
+white-space:nowrap;
+
+padding:10px 0;
+
+border-radius:22px;
+
+margin-bottom:12px;
+
+background:
+linear-gradient(
+135deg,
+rgba(0,170,255,.08),
+rgba(255,0,128,.08)
+);
+
+border:
+1px solid rgba(255,255,255,.06);
+
+}
+
+.ticker-text{
+
+display:inline-block;
+
+padding-left:100%;
+
+animation:tickerMove 40s linear infinite;
+
+font-size:12px;
+font-weight:700;
+
+color:#ffffff;
+
+}
+
+@keyframes tickerMove{
+
+100%{
+transform:translateX(-100%);
+}
+
+}
+
+/* TABS */
+.tab-menu{
+
+width:100%;
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+
+gap:8px;
+
+padding:8px;
+
+border-radius:22px;
+
+margin-bottom:14px;
+
+background:
+rgba(255,255,255,.03);
+
+border:
+1px solid rgba(255,255,255,.05);
+
+}
+
+.tab-btn{
+
+border:none;
+
+padding:13px 5px;
+
+border-radius:16px;
+
+background:transparent;
+
+font-size:11px;
+font-weight:800;
+
+cursor:pointer;
+
+color:#cfcfcf;
+
+transition:.35s;
+
+}
+
+.tab-btn.active{
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0077
+);
+
+color:#fff;
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 18px rgba(0,170,255,.5),
+0 0 20px rgba(255,0,128,.35);
+
+}
+
+/* CONTENT */
+.content-section{
+
+width:100%;
+
+display:none;
+
+padding:10px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+180deg,
+rgba(0,170,255,.04),
+rgba(255,0,128,.04)
+);
+
+border:
+1px solid rgba(255,255,255,.05);
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.45);
+
+margin-bottom:20px;
+
+}
+
+/* GRID */
+.cards-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:14px;
+
+}
+
+/* CARDS */
+.pk-card,
+.reward-card,
+.event-banner-card{
+
+border-radius:28px;
+
+padding:14px;
+
+position:relative;
+
+overflow:hidden;
+
+border:
+1px solid rgba(255,255,255,.06);
+
+background:
+linear-gradient(
+135deg,
+rgba(0,170,255,.08),
+rgba(255,0,128,.08)
+);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.45);
+
+animation:cardFade .5s ease;
+
+}
+
+@keyframes cardFade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.card-meta{
+
+display:flex;
+justify-content:space-between;
+
+margin-bottom:10px;
+
+font-size:10px;
+
+}
+
+.match-id{
+
+padding:5px 11px;
+
+border-radius:10px;
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0077
+);
+
+font-size:10px;
+font-weight:800;
+
+color:#ffffff;
+
+}
+
+.brand-watermark{
+
+color:#ffffff;
+font-weight:800;
+opacity:.8;
+
+}
+
+.pk-match-area{
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+gap:10px;
+
+}
+
+.player-wrapper{
+
+width:40%;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+text-align:center;
+
+}
+
+.profile-slot,
+.reward-dp{
+
+width:70px;
+height:70px;
+
+border-radius:22px;
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0080
+);
+
+border:
+2px solid rgba(255,255,255,.15);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+overflow:hidden;
+
+margin-bottom:8px;
+
+box-shadow:
+0 0 25px rgba(0,170,255,.45),
+0 0 25px rgba(255,0,128,.35);
+
+}
+
+.profile-slot::before,
+.reward-dp::before{
+
+content:'AT';
+
+font-size:16px;
+font-weight:900;
+
+color:#fff;
+
+}
+
+.player-label,
+.reward-username{
+
+font-size:13px;
+font-weight:800;
+
+color:#ffffff;
+
+}
+
+.player-uid,
+.reward-uid-label{
+
+font-size:9px;
+
+margin-top:4px;
+
+padding:3px 8px;
+
+border-radius:8px;
+
+background:
+rgba(255,255,255,.08);
+
+color:#ffffff;
+
+}
+
+.pk-center{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+.pk-text{
+
+font-size:34px;
+font-weight:900;
+
+background:
+linear-gradient(
+45deg,
+#00bfff,
+#ff0080,
+#00bfff
+);
+
+background-size:300% 300%;
+
+animation:pkGlow 4s ease infinite;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+@keyframes pkGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.pk-timer{
+
+margin-top:5px;
+
+font-size:10px;
+font-weight:700;
+
+padding:5px 10px;
+
+border-radius:10px;
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0080
+);
+
+color:#fff;
+
+box-shadow:
+0 0 15px rgba(255,0,128,.35);
+
+}
+
+.crown-asset{
+
+position:absolute;
+
+top:-15px;
+
+font-size:22px;
+
+}
+
+.is-loser{
+opacity:.45;
+}
+
+/* BONUS */
+.reward-card{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+
+}
+
+.reward-left{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+flex-wrap:wrap;
+
+}
+
+.rank-tag{
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0080
+);
+
+color:#fff;
+
+font-size:10px;
+font-weight:800;
+
+padding:6px 10px;
+
+border-radius:10px;
+
+}
+
+.bonus-coins{
+
+font-size:12px;
+font-weight:800;
+
+padding:7px 12px;
+
+border-radius:12px;
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0080
+);
+
+color:#fff;
+
+}
+
+/* EVENTS */
+.event-banner-card{
+
+text-align:center;
+
+}
+
+.event-badge{
+
+display:inline-block;
+
+padding:6px 12px;
+
+border-radius:30px;
+
+margin-bottom:10px;
+
+background:
+linear-gradient(
+135deg,
+#009dff,
+#ff0080
+);
+
+color:#fff;
+
+font-size:10px;
+font-weight:800;
+
+}
+
+.event-heading{
+
+font-size:20px;
+font-weight:900;
+
+margin-bottom:8px;
+
+color:#ffffff;
+
+}
+
+.event-desc{
+
+font-size:12px;
+
+line-height:1.6;
+
+color:#d6d6d6;
+
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+.cards-grid{
+grid-template-columns:1fr;
+}
+
+.tab-menu{
+grid-template-columns:repeat(2,1fr);
+}
+
+.app-title{
+font-size:23px;
+}
+
+.profile-slot,
+.reward-dp{
+width:60px;
+height:60px;
+}
+
+.pk-text{
+font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars-container"
+id="stars-container"></div>
+
+<div class="phone-container">
+
+<div class="app-header">
+
+<div class="header-content">
+
+<h1 class="app-title">
+AT LIVE PK LIST
+</h1>
+
+<div class="live-clock-wrapper"
+id="live-clock-display">
+🗓️ Loading Time...
+</div>
+
+</div>
+
+</div>
+
+<div class="ticker-container">
+
+<div class="ticker-text">
+
+এটি লাইভ (AT LIVE) অফিশিয়াল পরিবারে আপনাকে স্বাগত! প্রতিদিন নতুন PK ম্যাচ, টুর্নামেন্ট, বোনাস এবং ইভেন্ট আপডেট দেখুন!
+
+</div>
+
+</div>
+
+<div class="tab-menu">
+
+<button class="tab-btn active"
+onclick="showTab('tab1',this)">
+📅 PK LIST
+</button>
+
+<button class="tab-btn"
+onclick="showTab('tab2',this)">
+🏆 WINNERS
+</button>
+
+<button class="tab-btn"
+onclick="showTab('tab3',this)">
+🎁 BONUS
+</button>
+
+<button class="tab-btn"
+onclick="showTab('tab4',this)">
+🚀 EVENTS
+</button>
+
+</div>
+
+<!-- TAB 1 -->
+<div id="tab1"
+class="content-section"
+style="display:block;">
+
+<div class="cards-grid">
+
+<div class="pk-card">
+
+<div class="card-meta">
+
+<span class="match-id">
+⚔️ MATCH #01
+</span>
+
+<span class="brand-watermark">
+AT LIVE
+</span>
+
+</div>
+
+<div class="pk-match-area">
+
+<div class="player-wrapper">
+
+<div class="profile-slot"></div>
+
+<span class="player-label">
+Princess_Anu
+</span>
+
+<span class="player-uid">
+ID: 558932
+</span>
+
+</div>
+
+<div class="pk-center">
+
+<span class="pk-text">
+PK
+</span>
+
+<span class="pk-timer">
+⏱️ 5 MINS
+</span>
+
+</div>
+
+<div class="player-wrapper">
+
+<div class="profile-slot"></div>
+
+<span class="player-label">
+Cute_Bella
+</span>
+
+<span class="player-uid">
+ID: 994231
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pk-card">
+
+<div class="card-meta">
+
+<span class="match-id">
+⚔️ MATCH #02
+</span>
+
+<span class="brand-watermark">
+AT LIVE
+</span>
+
+</div>
+
+<div class="pk-match-area">
+
+<div class="player-wrapper">
+
+<div class="profile-slot"></div>
+
+<span class="player-label">
+Siam_99
+</span>
+
+<span class="player-uid">
+ID: 445511
+</span>
+
+</div>
+
+<div class="pk-center">
+
+<span class="pk-text">
+PK
+</span>
+
+<span class="pk-timer">
+⏱️ 10 MINS
+</span>
+
+</div>
+
+<div class="player-wrapper">
+
+<div class="profile-slot"></div>
+
+<span class="player-label">
+Miya_Bro
+</span>
+
+<span class="player-uid">
+ID: 882233
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TAB 2 -->
+<div id="tab2"
+class="content-section">
+
+<div class="pk-card">
+
+<div class="card-meta">
+
+<span class="match-id">
+🏆 WINNER
+</span>
+
+<span class="brand-watermark">
+MATCH END
+</span>
+
+</div>
+
+<div class="pk-match-area">
+
+<div class="player-wrapper">
+
+<span class="crown-asset">
+👑
+</span>
+
+<div class="profile-slot"></div>
+
+<span class="player-label">
+Angel_Riya
+</span>
+
+<span class="player-uid">
+ID: 334455
+</span>
+
+</div>
+
+<div class="pk-center">
+
+<span class="pk-text">
+WIN
+</span>
+
+<span class="pk-timer">
+4.5M
+</span>
+
+</div>
+
+<div class="player-wrapper is-loser">
+
+<div class="profile-slot"></div>
+
+<span class="player-label">
+Miya_Khan
+</span>
+
+<span class="player-uid">
+ID: 778899
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TAB 3 -->
+<div id="tab3"
+class="content-section">
+
+<div class="reward-card">
+
+<div class="reward-left">
+
+<div class="rank-tag">
+💎 TOP 1
+</div>
+
+<div class="reward-dp"></div>
+
+<div>
+
+<div class="reward-username">
+Angel_Riya
+</div>
+
+<div class="reward-uid-label">
+UID: 334455
+</div>
+
+</div>
+
+</div>
+
+<div class="bonus-coins">
+💎 10M PTS
+</div>
+
+</div>
+
+</div>
+
+<!-- TAB 4 -->
+<div id="tab4"
+class="content-section">
+
+<div class="event-banner-card">
+
+<div class="event-badge">
+🔥 LIVE EVENT
+</div>
+
+<div class="event-heading">
+AT LIVE STAR WAR
+</div>
+
+<div class="event-desc">
+
+Biggest official PK tournament coming soon.
+Stay connected for registration updates.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* TAB SYSTEM FIXED */
+
+function showTab(tabId,btn){
+
+document.querySelectorAll('.content-section')
+.forEach(section=>{
+section.style.display='none';
+});
+
+document.getElementById(tabId)
+.style.display='block';
+
+document.querySelectorAll('.tab-btn')
+.forEach(button=>{
+button.classList.remove('active');
+});
+
+btn.classList.add('active');
+
+}
+
+/* LIVE CLOCK */
+
+function updateBangladeshTime(){
+
+const now = new Date();
+
+const options = {
+
+timeZone:'Asia/Dhaka',
+hour:'2-digit',
+minute:'2-digit',
+second:'2-digit',
+hour12:true
+
+};
+
+const dateOptions = {
+
+timeZone:'Asia/Dhaka',
+day:'2-digit',
+month:'short',
+year:'numeric'
+
+};
+
+document.getElementById(
+'live-clock-display'
+).innerHTML =
+
+`🗓️ ${now.toLocaleDateString(
+'en-US',
+dateOptions
+)}
+
+| ⏱️ ${now.toLocaleTimeString(
+'en-US',
+options
+)}`;
+
+}
+
+setInterval(updateBangladeshTime,1000);
+
+updateBangladeshTime();
+
+/* STARS */
+
+const starsContainer =
+document.getElementById(
+'stars-container'
+);
+
+function createStar(){
+
+const star =
+document.createElement('div');
+
+const sizes =
+['small','medium','big'];
+
+const randomSize =
+sizes[Math.floor(Math.random()*sizes.length)];
+
+star.classList.add(
+'star',
+randomSize
+);
+
+star.style.left =
+Math.random()*100 + 'vw';
+
+star.style.animationDuration =
+(6 + Math.random()*8) + 's';
+
+star.style.opacity =
+0.4 + Math.random();
+
+starsContainer.appendChild(star);
+
+setTimeout(()=>{
+
+star.remove();
+
+},15000);
+
+}
+
+setInterval(createStar,180);
+
+</script>
+
+</body>
+</html>
